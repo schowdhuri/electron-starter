@@ -18,6 +18,7 @@ const config = {
   resolve: {
     alias: {
       "@atoms/": join(PACKAGE_ROOT, "src", "components", "atoms", "/"),
+      "@constants/": join(PACKAGE_ROOT, "src", "constants", "/"),
       "@molecules/": join(PACKAGE_ROOT, "src", "components", "molecules", "/"),
       "@organisms/": join(PACKAGE_ROOT, "src", "components", "organisms", "/"),
       "@pages/": join(PACKAGE_ROOT, "src", "pages", "/"),
