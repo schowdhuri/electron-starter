@@ -1,6 +1,7 @@
-import { LangKeys } from "@src/constants/lang/LangKeys";
-import { FC, useEffect, useMemo, useState } from "react";
+import type { FC } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IntlProvider as ReacIntlProvider } from "react-intl";
+import type { LangKeys } from "@src/constants/lang/LangKeys";
 
 const SupportedLocales = {
   EN: "en",
