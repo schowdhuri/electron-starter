@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Page2 } from "./pages/Page2";
+import { Home } from "@pages/Home";
+import { Page2 } from "@pages/Page2";
 
 export const ROUTES = {
   Home: "/",
