@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { HashRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
+import { IntlProvider } from "@atoms/IntlProvider";
 import { AppRoutes } from "./Routes";
 
 const queryClient = new QueryClient({
@@ -18,9 +19,13 @@ ReactDOM.render(
   <HashRouter>
     <StrictMode>
       <RecoilRoot>
-        <QueryClientProvider client={queryClient}>
-          <AppRoutes />
-        </QueryClientProvider>
+        <IntlProvider>
+          <QueryClientProvider client={queryClient}>
+            <IntlProvider>
+              <AppRoutes />
+            </IntlProvider>
+          </QueryClientProvider>
+        </IntlProvider>
       </RecoilRoot>
     </StrictMode>
   </HashRouter>,

@@ -14,6 +14,7 @@
     "baseUrl": "./src",
     "paths": {
       "@atoms/*": ["components/atoms/*"],
+      "@constants/*": ["constants/*"],
       "@molecules/*": ["components/molecules/*"],
       "@organisms/*": ["components/organisms/*"],
       "@pages/*": ["pages/*"],
