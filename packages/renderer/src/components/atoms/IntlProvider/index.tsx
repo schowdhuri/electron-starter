@@ -22,7 +22,7 @@ export const IntlProvider: FC = ({ children }) => {
 
   useEffect(() => {
     console.log(navigator.language);
-    import(/* @vite-ignore */ `../../../constants/lang/${locale}`).then(
+    import(/* @vite-ignore */ `../../../constants/lang/${locale}.ts`).then(
       (val) => {
         setMessages(val.default);
       }

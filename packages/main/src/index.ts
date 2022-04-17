@@ -1,6 +1,7 @@
 import { app } from "electron";
 import "./security-restrictions";
-import { restoreOrCreateWindow } from "/@/mainWindow";
+import { restoreOrCreateWindow } from "@src/mainWindow";
+import { registerStoreHandlers } from "./services/store";
 
 /**
  * Prevent multiple instances
@@ -38,6 +39,11 @@ app
   .whenReady()
   .then(restoreOrCreateWindow)
   .catch((e) => console.error("Failed create window:", e));
+
+app
+  .whenReady()
+  .then(registerStoreHandlers)
+  .catch((e) => console.error("Failed to register store handlers:", e));
 
 /**
  * Install devtools in development mode only
