@@ -56,6 +56,7 @@
     "@mantine/modals": "^4.1.2",
     "@mantine/notifications": "^4.1.2",
     "dayjs": "^1.11.0",
+    "electron-store": "^8.0.1",
     "electron-updater": "4.6.5",
     "react": "<18.0.0",
     "react-dom": "<18.0.0",
