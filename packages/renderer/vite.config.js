@@ -17,14 +17,14 @@ const config = {
   root: PACKAGE_ROOT,
   resolve: {
     alias: {
-      "@atoms/": join(PACKAGE_ROOT, "src", "components", "atoms", "/"),
-      "@constants/": join(PACKAGE_ROOT, "src", "constants", "/"),
-      "@molecules/": join(PACKAGE_ROOT, "src", "components", "molecules", "/"),
-      "@organisms/": join(PACKAGE_ROOT, "src", "components", "organisms", "/"),
-      "@pages/": join(PACKAGE_ROOT, "src", "pages", "/"),
+      "@atoms/": join(PACKAGE_ROOT, "src", "components", "atoms") + "/",
+      "@constants/": join(PACKAGE_ROOT, "src", "constants") + "/",
+      "@molecules/": join(PACKAGE_ROOT, "src", "components", "molecules") + "/",
+      "@organisms/": join(PACKAGE_ROOT, "src", "components", "organisms") + "/",
+      "@pages/": join(PACKAGE_ROOT, "src", "pages") + "/",
       "@src/": join(PACKAGE_ROOT, "src") + "/",
-      "@templates/": join(PACKAGE_ROOT, "src", "components", "templates", "/"),
-      "@utils/": join(PACKAGE_ROOT, "src", "utils", "/"),
+      "@templates/": join(PACKAGE_ROOT, "src", "components", "templates") + "/",
+      "@utils/": join(PACKAGE_ROOT, "src", "utils") + "/",
     },
   },
   plugins: [
