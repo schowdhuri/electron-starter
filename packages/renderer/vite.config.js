@@ -1,10 +1,10 @@
 /* eslint-env node */
 
-import { chrome } from "../../.electron-vendors.cache.json";
-import { join } from "path";
-import { builtinModules } from "module";
-import react from "@vitejs/plugin-react";
-import svgrPlugin from "vite-plugin-svgr";
+const { chrome } = require("../../.electron-vendors.cache.json");
+const { join } = require("path");
+const { builtinModules } = require("module");
+const react = require("@vitejs/plugin-react");
+const svgrPlugin = require("vite-plugin-svgr");
 
 const PACKAGE_ROOT = __dirname;
 
@@ -58,4 +58,4 @@ const config = {
   },
 };
 
-export default config;
+module.exports = config;

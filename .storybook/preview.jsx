@@ -1,10 +1,7 @@
-import { StrictMode } from "react";
-import ReactDOM from "react-dom";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { HashRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
+import { HashRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { IntlProvider } from "@atoms/IntlProvider";
-import { AppRoutes } from "./Routes";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,17 +12,26 @@ const queryClient = new QueryClient({
   },
 });
 
-ReactDOM.render(
-  <HashRouter>
-    <StrictMode>
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+};
+
+export const decorators = [
+  (Story) => (
+    <HashRouter>
       <RecoilRoot>
         <IntlProvider>
           <QueryClientProvider client={queryClient}>
-            <AppRoutes />
+            {Story()}
           </QueryClientProvider>
         </IntlProvider>
       </RecoilRoot>
-    </StrictMode>
-  </HashRouter>,
-  document.getElementById("app")
-);
+    </HashRouter>
+  ),
+];
