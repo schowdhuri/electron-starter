@@ -25,7 +25,8 @@
     "typecheck:renderer": "tsc --noEmit -p packages/renderer/tsconfig.json",
     "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "license": "node scripts/license"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
