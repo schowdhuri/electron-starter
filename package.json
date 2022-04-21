@@ -1,6 +1,7 @@
 {
   "name": "electron-starter",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=v16.13",
     "npm": ">=8.1"
